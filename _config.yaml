@@ -10,18 +10,12 @@ author:
     medium: https://medium.com/@fromoopstoops
     telegram: https://t.me/odinUmbelino
     whatsapp: https://wa.me/+5548998142779
-theme: minima
-minima:
-  skin: auto
-  social_links:
-    - { platform: linkedin,  user_url: "https://linkedin.com/in/rafaelumb" }
-    - { platform: github,    user_url: "https://github.com/FromOopsToOps" }
-    - { platform: rss,       user_url: "/feed.xml" }
+theme: null
+remote_theme: JustGoodThemes/BlogBox-Jekyll-Theme
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-include-cache
+  - jekyll-remote-theme
 markdown: kramdown
 kramdown:
   input: GFM
