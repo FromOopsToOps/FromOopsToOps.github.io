@@ -1,22 +1,40 @@
 ---
-import CTA from "./CTA.astro";
+const home = `${Astro.base}/`;
+const anchor = (id) => `${home}#${id}`;
 ---
+<footer class="site-footer">
+  <div class="container" style="padding: 28px 0 46px;">
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 style="margin:0 0 6px;">Odin’s Vault</h3>
+        <p style="margin:0; color: var(--muted);">
+          Custom websites & MVP web apps for small businesses.<br/>
+          SC/BR • Available online.
+        </p>
+      </div>
 
-<footer class="container" style="padding:28px 18px 44px;">
-  <div class="hr"></div>
-  <div class="grid cols-2" style="align-items:start;">
-    <div>
-      <div style="font-weight:900;">ODIN’S VAULT</div>
-      <p style="margin:8px 0 0;">
-        SC/BR • disponível online • sites e web apps para pequenos negócios que querem sair do “normal”.
-      </p>
-      <p class="small" style="margin:10px 0 0;">
-        “Se fosse pra ser igual, você não estaria fazendo o seu.”
-      </p>
+      <div class="card">
+        <h3 style="margin:0 0 6px;">Site</h3>
+        <p style="margin:0;">
+          <a class="small" href={anchor("features")}>Features</a><br/>
+          <a class="small" href={anchor("pricing")}>Services</a><br/>
+          <a class="small" href={`${Astro.base}/tech`}>Tech</a><br/>
+          <a class="small" href={`${Astro.base}/about`}>About</a><br/>
+          <a class="small" href={`${Astro.base}/proof`}>Proof</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 6px;">Contact</h3>
+        <p style="margin:0;">
+          <a class="small" href="https://calendly.com/your-next-devops/quick-chat" target="_blank" rel="noreferrer">Calendly</a><br/>
+          <a class="small" href="https://wa.me/5548998142779" target="_blank" rel="noreferrer">WhatsApp</a>
+        </p>
+      </div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
-      <CTA />
-      <div class="small">© {new Date().getFullYear()} Odin’s Vault. All rights reserved.</div>
-    </div>
+
+    <p class="small" style="margin:16px 0 0; color: rgba(231,234,243,0.55);">
+      © {new Date().getFullYear()} Odin’s Vault. No fluff. Just shipping.
+    </p>
   </div>
 </footer>

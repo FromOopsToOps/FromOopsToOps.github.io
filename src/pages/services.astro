@@ -1,88 +1,67 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CTA from "../components/CTA.astro";
-import PackageCard from "../components/PackageCard.astro";
-import FAQ from "../components/FAQ.astro";
 ---
 
-<BaseLayout title="Serviços — Odin’s Vault" description="Pacotes e serviços da Odin’s Vault: sites, landing pages e web apps para pequenos negócios.">
-  <section class="hero">
-    <div class="kicker">SERVIÇOS</div>
-    <h1>Productized MVP pra tirar do zero</h1>
-    <p class="sub">
-      Você não precisa de 50 features. Você precisa do mínimo certo — bonito, rápido e que gere retorno.
-    </p>
-    <div style="margin-top:18px;">
-      <CTA />
-    </div>
-  </section>
+<BaseLayout title="Services — Odin’s Vault" description="Landing pages, institutional sites, and MVP web apps — custom, fast, and conversion-ready.">
+  <section class="section" style="padding-top:54px;">
+    <div class="container">
+      <div class="kicker">Services</div>
+      <h1 style="margin:14px 0 10px; font-size: clamp(2rem, 3.6vw, 3rem); letter-spacing:-0.04em;">
+        What we build
+      </h1>
+      <p class="sub" style="max-width:820px;">
+        We don’t limit you to a “cyber theme”. The <b>vault vibe</b> is a brand option — not a cage.
+        The product is always custom.
+      </p>
 
-  <section class="section">
-    <div class="grid cols-3">
-      <PackageCard
-        title="Landing Page de Alta Conversão"
-        price="a partir de R$ 1.490"
-        bullets={[
-          "Uma página, um objetivo, sem distração",
-          "Copy e layout voltados para conversão",
-          "Deploy e entrega rápida",
-          "Base perfeita pra tráfego pago"
-        ]}
-      />
-      <PackageCard
-        title="Site Institucional (3–5 páginas)"
-        price="a partir de R$ 2.990"
-        highlight={true}
-        bullets={[
-          "Estrutura completa (Home/Serviços/Tech/Sobre/Contato)",
-          "Componentes reutilizáveis (cresce sem bagunça)",
-          "GA4 (opcional) e SEO básico",
-          "Pronto pra portfólio e provas sociais"
-        ]}
-      />
-      <PackageCard
-        title="Web App MVP (sob medida)"
-        price="sob orçamento"
-        bullets={[
-          "Ideal pra serviços com login, painel, fluxos",
-          "Integrações SaaS quando reduz custo",
-          "Entrega incremental",
-          "Escala depois da validação"
-        ]}
-      />
-    </div>
+      <div class="grid grid-3" style="margin-top:18px;">
+        <div class="card">
+          <h3>Landing Page</h3>
+          <p>1 page built to convert: offer, proof, pricing, CTA. Perfect for launches and campaigns.</p>
+          <ul class="list" style="margin-top:12px;">
+            <li>High-contrast modern design</li>
+            <li>Mobile-first + performance</li>
+            <li>Calendly + WhatsApp CTA</li>
+            <li>GA-ready</li>
+          </ul>
+        </div>
 
-    <div class="hr"></div>
+        <div class="card">
+          <h3>Institutional Website</h3>
+          <p>Multi-page site that feels premium and trustworthy.</p>
+          <ul class="list" style="margin-top:12px;">
+            <li>About, Services, Tech, Proof, Contact</li>
+            <li>SEO basics + analytics</li>
+            <li>Fast static hosting (GitHub Pages)</li>
+            <li>Easy to expand</li>
+          </ul>
+        </div>
 
-    <div class="grid cols-2">
-      <div class="card">
-        <div class="kicker">ADD-ONS</div>
-        <h3>Extras comuns</h3>
-        <p style="margin:0;">
-          • Identidade visual leve (paleta, tipografia, componentes)<br/>
-          • Copy mais agressiva (sem virar cringe)<br/>
-          • Integrações (WhatsApp, CRMs, pagamentos, etc.)<br/>
-          • Migração de site antigo<br/>
-          • Páginas extras e seções específicas
+        <div class="card">
+          <h3>MVP Web App + Landing</h3>
+          <p>Validate your product idea with a real app, not a slide deck.</p>
+          <ul class="list" style="margin-top:12px;">
+            <li>Auth + core workflows</li>
+            <li>Integrations as needed</li>
+            <li>Admin + dashboards (when relevant)</li>
+            <li>Landing page to sell it</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px;">
+        <h3>Custom products (the “treasure” work)</h3>
+        <p>
+          If you want something unusual — interactive experiences, niche tooling, automation, integrations —
+          that’s where we shine. Most agencies will say “too complicated”. We’ll ask: <b>what’s the simplest version that wins?</b>
         </p>
       </div>
-      <div class="card">
-        <div class="kicker">TIMELINE</div>
-        <h3>Prazo típico</h3>
-        <p style="margin:0;">
-          Landing: 3–7 dias úteis<br/>
-          Site: 1–2 semanas<br/>
-          App MVP: varia por escopo (mas com protótipo no começo)
-        </p>
-        <div class="hr"></div>
-        <CTA />
+
+      <div class="btnrow" style="margin-top:18px;">
+        <a class="btn btn-primary" href="https://calendly.com/your-next-devops/quick-chat" target="_blank" rel="noreferrer">Book a quick chat</a>
+        <a class="btn btn-ghost" href="https://wa.me/5548998142779" target="_blank" rel="noreferrer">WhatsApp</a>
+        <a class="btn btn-ghost" href={`${Astro.base}/`}>Back home</a>
       </div>
     </div>
-  </section>
-
-  <section class="section">
-    <div class="kicker">FAQ</div>
-    <h2>Perguntas que importam</h2>
-    <FAQ />
   </section>
 </BaseLayout>

@@ -135,3 +135,132 @@ h1,h2,h3 { letter-spacing: -0.02em; margin: 0 0 10px; }
   border:1px solid var(--line);
   background: rgba(255,255,255,0.04);
 }
+
+
+/* ---------- Layout helpers (Astrogent-ish) ---------- */
+.container { max-width: var(--max); margin: 0 auto; padding: 0 18px; }
+
+.section { padding: 80px 0; }
+.section h2 { margin: 14px 0 12px; font-size: clamp(1.6rem, 2.4vw, 2.25rem); letter-spacing: -0.03em; }
+.kicker { display:inline-flex; align-items:center; gap:10px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(231,234,243,0.78); }
+.kicker:before { content:""; width:10px; height:10px; border-radius:999px; background: var(--neon); box-shadow: 0 0 18px rgba(57,255,20,0.35); }
+
+.grid { display:grid; gap: 16px; }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 920px){ .grid-3{grid-template-columns:1fr;} .grid-2{grid-template-columns:1fr;} }
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.card h3 { margin: 0 0 6px; font-size: 16px; letter-spacing: -0.02em; }
+.card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+
+.pill {
+  display:inline-flex; align-items:center; gap:8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(57,255,20,0.09);
+  border: 1px solid rgba(57,255,20,0.22);
+  color: rgba(231,234,243,0.95);
+  font-size: 12px;
+}
+
+.statrow { display:flex; gap: 16px; flex-wrap: wrap; margin-top: 26px; }
+.stat { min-width: 140px; padding: 14px 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.04); }
+.stat b { display:block; font-size: 18px; }
+.stat span { display:block; margin-top: 4px; color: var(--muted); font-size: 12px; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(7,10,15,0.70);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+.header-inner { display:flex; align-items:center; justify-content:space-between; padding: 14px 0; gap: 14px; }
+.brand { display:flex; align-items: baseline; gap: 10px; text-decoration:none; color: var(--text); }
+.brand-wordmark { font-weight: 900; letter-spacing: -0.03em; }
+.brand-tag {
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(231,234,243,0.72);
+  border: 1px solid rgba(216,183,90,0.35);
+  background: rgba(216,183,90,0.09);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+.nav { display:flex; align-items:center; gap: 14px; flex-wrap:wrap; justify-content:flex-end; }
+.navlink { text-decoration:none; color: rgba(231,234,243,0.78); font-size: 13px; }
+.navlink:hover { color: rgba(231,234,243,1); }
+.navlink.cta {
+  color: rgba(7,10,15,0.95);
+  background: linear-gradient(90deg, var(--neon), var(--gold));
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+/* ---------- Hero ---------- */
+.hero2 {
+  padding: 84px 0 30px;
+  position: relative;
+  overflow: hidden;
+}
+.hero2:before {
+  content:"";
+  position:absolute;
+  inset:-120px -60px auto -60px;
+  height: 360px;
+  background: radial-gradient(circle at 20% 20%, rgba(57,255,20,0.22), transparent 55%),
+              radial-gradient(circle at 80% 10%, rgba(216,183,90,0.18), transparent 52%);
+  filter: blur(10px);
+  pointer-events:none;
+}
+.hero2 h1 {
+  margin: 14px 0 10px;
+  font-size: clamp(2.2rem, 4.4vw, 3.6rem);
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+}
+.hero2 .sub {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(231,234,243,0.80);
+  line-height: 1.6;
+  font-size: 16px;
+}
+.btnrow { display:flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+  text-decoration:none;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 14px;
+}
+.btn-primary { background: linear-gradient(90deg, var(--neon), var(--gold)); color: rgba(7,10,15,0.95); }
+.btn-ghost { border: 1px solid rgba(255,255,255,0.14); color: rgba(231,234,243,0.88); background: rgba(255,255,255,0.03); }
+
+/* ---------- Testimonials ---------- */
+.quote {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(231,234,243,0.84);
+}
+.quote .who { margin-top: 12px; color: rgba(231,234,243,0.62); font-size: 12px; }
+
+/* ---------- Contact ---------- */
+.contactbox { display:flex; gap: 16px; flex-wrap: wrap; align-items: stretch; }
+.contactbox a { flex: 1 1 260px; }

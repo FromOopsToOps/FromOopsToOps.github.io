@@ -1,54 +1,28 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CTA from "../components/CTA.astro";
 ---
 
-<BaseLayout title="Provas — Odin’s Vault" description="Portfólio, cases e depoimentos (placeholder por enquanto).">
-  <section class="hero">
-    <div class="kicker">PROVAS</div>
-    <h1>Cases, prints e depoimentos</h1>
-    <p class="sub">
-      Página placeholder: você vai adicionar screenshots, links e depoimentos reais aqui.
-      Estrutura já pronta pra ficar forte assim que você colar as provas.
-    </p>
-    <div style="margin-top:18px;">
-      <CTA />
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="grid cols-2">
-      <div class="card">
-        <div class="kicker">PORTFÓLIO</div>
-        <h2>Slots de projetos</h2>
-        <p style="margin:0;">
-          • Projeto 1 — screenshot + 3 bullets de impacto<br/>
-          • Projeto 2 — screenshot + 3 bullets de impacto<br/>
-          • Projeto 3 — screenshot + 3 bullets de impacto
-        </p>
-      </div>
-      <div class="card">
-        <div class="kicker">DEPOIMENTOS</div>
-        <h2>Slots de prova social</h2>
-        <p style="margin:0;">
-          • “Frase forte do cliente 1” — Nome, empresa<br/>
-          • “Frase forte do cliente 2” — Nome, empresa<br/>
-          • “Frase forte do cliente 3” — Nome, empresa
-        </p>
-      </div>
-    </div>
-
-    <div class="hr"></div>
-
-    <div class="card">
-      <div class="kicker">CHECKLIST (pra você preencher rápido)</div>
-      <h3 style="margin-top:8px;">O que colar aqui depois</h3>
-      <p style="margin:0;">
-        • 3–6 screenshots (antes/depois se tiver)<br/>
-        • 2–5 depoimentos curtos (1–2 linhas)<br/>
-        • Links (se os projetos forem públicos)<br/>
-        • Métricas (quando possível): tempo, conversão, resultado
+<BaseLayout title="Proof — Odin’s Vault" description="Testimonials, screenshots, and case studies (placeholder).">
+  <section class="section" style="padding-top:54px;">
+    <div class="container">
+      <div class="kicker">Proof</div>
+      <h1 style="margin:14px 0 10px; font-size: clamp(2rem, 3.6vw, 3rem); letter-spacing:-0.04em;">
+        Testimonials & screenshots
+      </h1>
+      <p class="sub" style="max-width:820px;">
+        Placeholder page — you’ll drop real testimonials, screenshots, and short case studies here.
       </p>
+
+      <div class="grid grid-3" style="margin-top:18px;">
+        <div class="card"><h3>Case #1</h3><p>Before/after, what we shipped, and what improved.</p></div>
+        <div class="card"><h3>Case #2</h3><p>Key screens + the result the client cared about.</p></div>
+        <div class="card"><h3>Case #3</h3><p>Short story. Concrete outcome. No fluff.</p></div>
+      </div>
+
+      <div class="btnrow" style="margin-top:18px;">
+        <a class="btn btn-primary" href="https://calendly.com/your-next-devops/quick-chat" target="_blank" rel="noreferrer">Book a quick chat</a>
+        <a class="btn btn-ghost" href="https://wa.me/5548998142779" target="_blank" rel="noreferrer">WhatsApp</a>
+      </div>
     </div>
   </section>
 </BaseLayout>
