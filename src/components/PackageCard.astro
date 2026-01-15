@@ -1,0 +1,15 @@
+---
+const { title, price, bullets = [], highlight = false } = Astro.props;
+---
+
+<div class="card" style={highlight ? "border-color: rgba(57,255,20,0.35);" : ""}>
+  <div class="kicker">{highlight ? "MVP RECOMENDADO" : "PACOTE"}</div>
+  <h3 style="margin-top:8px;">{title}</h3>
+  <div style="font-size:22px;font-weight:900;letter-spacing:-0.02em;margin:6px 0 10px;">
+    {price}
+  </div>
+
+  <ul style="margin:0;padding-left:18px;color:rgba(231,234,243,0.82);line-height:1.7;">
+    {bullets.map((b) => <li>{b}</li>)}
+  </ul>
+</div>

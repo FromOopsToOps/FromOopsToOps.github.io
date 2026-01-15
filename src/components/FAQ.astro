@@ -1,0 +1,17 @@
+---
+const items = [
+  { q: "Vocês fazem ‘qualquer coisa’?", a: "Se for web, sim — mas eu vou te dizer na lata quando algo virar perda de tempo ou inflar custo sem retorno." },
+  { q: "Vai demorar?", a: "O objetivo é ritmo de startup: protótipo rápido, validação e entrega incremental. Sem drama." },
+  { q: "E manutenção?", a: "Preferência por SaaS e soluções gerenciadas. Menos overhead, menos boleto escondido." },
+  { q: "Posso pedir algo fora do comum?", a: "É literalmente o ponto. Normal é ruído. Se você quer algo único, a gente fala a mesma língua." }
+];
+---
+
+<div class="grid cols-2">
+  {items.map((it) => (
+    <div class="card">
+      <h3 style="margin:0 0 6px;">{it.q}</h3>
+      <p style="margin:0;">{it.a}</p>
+    </div>
+  ))}
+</div>

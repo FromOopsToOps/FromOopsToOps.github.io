@@ -1,0 +1,142 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import PackageCard from "../components/PackageCard.astro";
+import FAQ from "../components/FAQ.astro";
+---
+
+<BaseLayout title="Odin’s Vault — sites e web apps fora do normal" description="Transforme sua ideia em um produto real. Sites e web apps com velocidade de startup e estética de cyber vault.">
+  <section class="hero">
+    <div class="badge"><span class="dot"></span><span class="small">tesouros > templates</span></div>
+    <h1 style="margin-top:14px;">
+      Sua ideia não nasceu pra ser <span style="color:var(--neon);text-shadow:0 0 24px rgba(57,255,20,0.25);">medíocre</span>.
+    </h1>
+    <p class="sub">
+      Odin’s Vault cria sites e web apps para pequenos negócios que querem tirar o sonho da gaveta e colocar no mundo —
+      rápido, bonito e com mentalidade de produto.
+    </p>
+
+    <div style="margin-top:18px;">
+      <CTA />
+      <div class="small" style="margin-top:10px;">Primeira conversa: 15 min. Sem enrolação. Sem “vamos alinhar expectativas”.</div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="kicker">O QUE VOCÊ GANHA</div>
+        <h3>Velocidade real</h3>
+        <p>Entrega em ciclos curtos, com protótipo e validação cedo — antes de você gastar energia no caminho errado.</p>
+      </div>
+      <div class="card">
+        <div class="kicker">O QUE VOCÊ GANHA</div>
+        <h3>Algo único</h3>
+        <p>Seu negócio não é genérico. Seu site/app também não deveria ser. A gente projeta com identidade.</p>
+      </div>
+      <div class="card">
+        <div class="kicker">O QUE VOCÊ GANHA</div>
+        <h3>Menos manutenção</h3>
+        <p>Preferência por SaaS e serviços gerenciados: menos bomba relógio, menos “dívida técnica” escondida.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid cols-2">
+      <div>
+        <div class="kicker">MANIFESTO</div>
+        <h2>“Se fosse pra ser igual, você não estaria fazendo o seu.”</h2>
+        <p>
+          Alguns projetos morrem porque tentam caber nas regras dos outros. Aqui é o contrário:
+          a gente constrói uma peça sob medida — e faz ela rodar no mundo real.
+        </p>
+        <p class="small">
+          Frases que guiam a Vault: “algumas ideias nasceram medíocres, a sua não” • “todo mundo tem medo, quem enfrenta vence”
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="kicker">PRÓXIMO PASSO</div>
+        <h3>Você traz a ideia. Eu trago a execução.</h3>
+        <p style="margin-top:8px;">
+          Se o pedido for “fora do comum”, melhor ainda. Normal é barulho.
+        </p>
+        <div style="margin-top:14px;">
+          <CTA />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="kicker">PACOTES</div>
+    <h2>Productized MVP (pra sair do zero)</h2>
+    <p>
+      Sem escopo infinito. Sem “fase 1/2/3” que nunca chega. MVP com foco no que gera retorno — e evolui depois.
+    </p>
+
+    <div class="grid cols-3" style="margin-top:14px;">
+      <PackageCard
+        title="Landing Page de Alta Conversão"
+        price="a partir de R$ 1.490"
+        bullets={[
+          "Design cyber vault (dark + neon + gold)",
+          "Copy e estrutura orientadas a conversão",
+          "Deploy no GitHub Pages (ou seu provedor)",
+          "SEO básico + performance"
+        ]}
+      />
+      <PackageCard
+        title="Site Institucional (3–5 páginas)"
+        price="a partir de R$ 2.990"
+        highlight={true}
+        bullets={[
+          "Home + Serviços + Tech + Sobre + Contato",
+          "Componentes reaproveitáveis",
+          "Google Analytics (GA4)",
+          "Pronto pra crescer com portfólio/testemunhos"
+        ]}
+      />
+      <PackageCard
+        title="Web App MVP (sob medida)"
+        price="sob orçamento"
+        bullets={[
+          "Protótipo rápido + iteração",
+          "Integrações SaaS quando faz sentido",
+          "Entrega incremental (sem big-bang)",
+          "Escala conforme validação"
+        ]}
+      />
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <div class="kicker">PROCESSO</div>
+        <h3>Como a Vault trabalha</h3>
+        <p style="margin:0;">
+          1) Alinhamento de objetivo (não de “feature”)<br/>
+          2) Protótipo e validação<br/>
+          3) Entrega incremental com foco em impacto<br/>
+          4) Ajustes finos e expansão (se fizer sentido)
+        </p>
+      </div>
+      <div class="card">
+        <div class="kicker">SEM PAPO</div>
+        <h3>O que você NÃO vai ouvir</h3>
+        <p style="margin:0;">
+          “Isso é muito complicado” • “tem que jogar dentro das regras” • “o cliente tá sempre certo”<br/>
+          Aqui a regra é: verdade > bajulação.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="kicker">FAQ</div>
+    <h2>Objeções (e respostas diretas)</h2>
+    <FAQ />
+  </section>
+</BaseLayout>

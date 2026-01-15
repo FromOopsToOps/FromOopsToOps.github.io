@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+---
+
+<BaseLayout title="Tech — Odin’s Vault" description="Como a Odin’s Vault acelera entregas usando AI, SaaS e escolhas arquiteturais pragmáticas.">
+  <section class="hero">
+    <div class="kicker">TECH</div>
+    <h1>Velocidade sem fragilidade</h1>
+    <p class="sub">
+      A Vault usa AI e serviços gerenciados onde faz sentido — não pra “substituir dev”, mas pra reduzir atrito,
+      cortar manutenção e colocar a ideia em produção mais rápido.
+    </p>
+    <div style="margin-top:18px;">
+      <CTA />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid cols-2">
+      <div class="card">
+        <div class="kicker">PRINCÍPIOS</div>
+        <h2>O que guia as escolhas</h2>
+        <p style="margin:0;">
+          • Simplicidade operacional<br/>
+          • Menos moving parts (menos pane)<br/>
+          • Rápido de evoluir (sem reescrever tudo)<br/>
+          • Observabilidade quando importa<br/>
+          • Segurança sem paranoia improdutiva
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="kicker">AI NA PRÁTICA</div>
+        <h2>Como AI entra (de verdade)</h2>
+        <p style="margin:0;">
+          • Prototipação veloz (UI/fluxos)<br/>
+          • Geração e refino de copy/SEO<br/>
+          • Automação de tarefas repetitivas<br/>
+          • Revisão assistida (edge cases, consistência)<br/>
+          • Acelerar “primeiro rascunho” — humano faz o corte final
+        </p>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="kicker">SaaS</div>
+        <h3>Menos manutenção</h3>
+        <p>Quando uma ferramenta resolve 80% do problema e reduz risco, eu prefiro integrar em vez de reinventar.</p>
+      </div>
+      <div class="card">
+        <div class="kicker">Stack</div>
+        <h3>Do simples ao sob medida</h3>
+        <p>Sites estáticos, apps com backend, integrações, automações… o stack segue o objetivo, não o ego.</p>
+      </div>
+      <div class="card">
+        <div class="kicker">Entrega</div>
+        <h3>Iterar > adivinhar</h3>
+        <p>Eu não vendo “certeza”. Eu vendo ciclo curto de feedback que encontra a solução certa rápido.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

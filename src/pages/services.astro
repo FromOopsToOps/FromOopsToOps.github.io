@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import PackageCard from "../components/PackageCard.astro";
+import FAQ from "../components/FAQ.astro";
+---
+
+<BaseLayout title="Serviços — Odin’s Vault" description="Pacotes e serviços da Odin’s Vault: sites, landing pages e web apps para pequenos negócios.">
+  <section class="hero">
+    <div class="kicker">SERVIÇOS</div>
+    <h1>Productized MVP pra tirar do zero</h1>
+    <p class="sub">
+      Você não precisa de 50 features. Você precisa do mínimo certo — bonito, rápido e que gere retorno.
+    </p>
+    <div style="margin-top:18px;">
+      <CTA />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid cols-3">
+      <PackageCard
+        title="Landing Page de Alta Conversão"
+        price="a partir de R$ 1.490"
+        bullets={[
+          "Uma página, um objetivo, sem distração",
+          "Copy e layout voltados para conversão",
+          "Deploy e entrega rápida",
+          "Base perfeita pra tráfego pago"
+        ]}
+      />
+      <PackageCard
+        title="Site Institucional (3–5 páginas)"
+        price="a partir de R$ 2.990"
+        highlight={true}
+        bullets={[
+          "Estrutura completa (Home/Serviços/Tech/Sobre/Contato)",
+          "Componentes reutilizáveis (cresce sem bagunça)",
+          "GA4 (opcional) e SEO básico",
+          "Pronto pra portfólio e provas sociais"
+        ]}
+      />
+      <PackageCard
+        title="Web App MVP (sob medida)"
+        price="sob orçamento"
+        bullets={[
+          "Ideal pra serviços com login, painel, fluxos",
+          "Integrações SaaS quando reduz custo",
+          "Entrega incremental",
+          "Escala depois da validação"
+        ]}
+      />
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <div class="kicker">ADD-ONS</div>
+        <h3>Extras comuns</h3>
+        <p style="margin:0;">
+          • Identidade visual leve (paleta, tipografia, componentes)<br/>
+          • Copy mais agressiva (sem virar cringe)<br/>
+          • Integrações (WhatsApp, CRMs, pagamentos, etc.)<br/>
+          • Migração de site antigo<br/>
+          • Páginas extras e seções específicas
+        </p>
+      </div>
+      <div class="card">
+        <div class="kicker">TIMELINE</div>
+        <h3>Prazo típico</h3>
+        <p style="margin:0;">
+          Landing: 3–7 dias úteis<br/>
+          Site: 1–2 semanas<br/>
+          App MVP: varia por escopo (mas com protótipo no começo)
+        </p>
+        <div class="hr"></div>
+        <CTA />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="kicker">FAQ</div>
+    <h2>Perguntas que importam</h2>
+    <FAQ />
+  </section>
+</BaseLayout>

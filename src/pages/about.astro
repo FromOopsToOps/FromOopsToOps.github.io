@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+---
+
+<BaseLayout title="Sobre — Odin’s Vault" description="Quem é Odin, o que é a Vault, e por que você vai querer construir aqui.">
+  <section class="hero">
+    <div class="kicker">SOBRE</div>
+    <h1>Odin (e a Vault)</h1>
+    <p class="sub">
+      Página institucional — por enquanto com texto placeholder. Depois você ajusta com sua história real, conquistas, bastidores, e “porquê”.
+    </p>
+    <div style="margin-top:18px;">
+      <CTA />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid cols-2">
+      <div class="card">
+        <div class="kicker">HISTÓRIA</div>
+        <h2>Lorem ipsum</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia, ipsum at varius feugiat,
+          enim tellus placerat dui, a pharetra massa eros sed augue. Fusce quis elit non est tempus posuere.
+        </p>
+        <p>
+          Curabitur at mi in urna aliquam facilisis. Sed a finibus massa, vitae vulputate justo. Vivamus
+          feugiat, lectus in vulputate vulputate, metus libero cursus sem, eu bibendum orci risus quis nulla.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="kicker">VALORES</div>
+        <h2>O que eu busco</h2>
+        <p style="margin:0;">
+          • Tesouros (ideias raras) > normalidade<br/>
+          • Execução rápida com feedback real<br/>
+          • Simplicidade que mantém o produto vivo<br/>
+          • Verdade técnica (sem enrolar o cliente)<br/>
+          • Estética com identidade (cyber vault)
+        </p>
+        <div class="hr"></div>
+        <p class="small" style="margin:0;">
+          “Algumas ideias nasceram medíocres, a sua não.”
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

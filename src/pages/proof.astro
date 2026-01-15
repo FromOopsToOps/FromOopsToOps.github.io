@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+---
+
+<BaseLayout title="Provas — Odin’s Vault" description="Portfólio, cases e depoimentos (placeholder por enquanto).">
+  <section class="hero">
+    <div class="kicker">PROVAS</div>
+    <h1>Cases, prints e depoimentos</h1>
+    <p class="sub">
+      Página placeholder: você vai adicionar screenshots, links e depoimentos reais aqui.
+      Estrutura já pronta pra ficar forte assim que você colar as provas.
+    </p>
+    <div style="margin-top:18px;">
+      <CTA />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid cols-2">
+      <div class="card">
+        <div class="kicker">PORTFÓLIO</div>
+        <h2>Slots de projetos</h2>
+        <p style="margin:0;">
+          • Projeto 1 — screenshot + 3 bullets de impacto<br/>
+          • Projeto 2 — screenshot + 3 bullets de impacto<br/>
+          • Projeto 3 — screenshot + 3 bullets de impacto
+        </p>
+      </div>
+      <div class="card">
+        <div class="kicker">DEPOIMENTOS</div>
+        <h2>Slots de prova social</h2>
+        <p style="margin:0;">
+          • “Frase forte do cliente 1” — Nome, empresa<br/>
+          • “Frase forte do cliente 2” — Nome, empresa<br/>
+          • “Frase forte do cliente 3” — Nome, empresa
+        </p>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="card">
+      <div class="kicker">CHECKLIST (pra você preencher rápido)</div>
+      <h3 style="margin-top:8px;">O que colar aqui depois</h3>
+      <p style="margin:0;">
+        • 3–6 screenshots (antes/depois se tiver)<br/>
+        • 2–5 depoimentos curtos (1–2 linhas)<br/>
+        • Links (se os projetos forem públicos)<br/>
+        • Métricas (quando possível): tempo, conversão, resultado
+      </p>
+    </div>
+  </section>
+</BaseLayout>

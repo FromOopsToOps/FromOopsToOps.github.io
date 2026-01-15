@@ -1,0 +1,22 @@
+---
+import CTA from "./CTA.astro";
+---
+
+<footer class="container" style="padding:28px 18px 44px;">
+  <div class="hr"></div>
+  <div class="grid cols-2" style="align-items:start;">
+    <div>
+      <div style="font-weight:900;">ODIN’S VAULT</div>
+      <p style="margin:8px 0 0;">
+        SC/BR • disponível online • sites e web apps para pequenos negócios que querem sair do “normal”.
+      </p>
+      <p class="small" style="margin:10px 0 0;">
+        “Se fosse pra ser igual, você não estaria fazendo o seu.”
+      </p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
+      <CTA />
+      <div class="small">© {new Date().getFullYear()} Odin’s Vault. All rights reserved.</div>
+    </div>
+  </div>
+</footer>

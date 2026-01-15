@@ -1,0 +1,11 @@
+---
+const calendly = import.meta.env.PUBLIC_CALENDLY_URL || "https://calendly.com/your-next-devops/quick-chat";
+const whatsapp = import.meta.env.PUBLIC_WHATSAPP || "5548998142779";
+const msg = encodeURIComponent("Quero tirar uma ideia da gaveta. Bora falar?");
+const waLink = `https://wa.me/${whatsapp}?text=${msg}`;
+---
+
+<div style="display:flex;gap:12px;flex-wrap:wrap;">
+  <a class="btn primary" href={calendly} target="_blank" rel="noreferrer">Agendar no Calendly</a>
+  <a class="btn gold" href={waLink} target="_blank" rel="noreferrer">Chamar no WhatsApp</a>
+</div>
