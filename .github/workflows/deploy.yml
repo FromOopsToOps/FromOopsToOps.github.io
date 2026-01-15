@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Astro site to GitHub Pages
 
 on:
   push:
@@ -24,23 +24,23 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "20"
           cache: npm
 
-      - name: Install dependencies
+      - name: Install
         run: npm ci
 
       - name: Build
         env:
-          PUBLIC_CALENDLY_URL: https://calendly.com/your-next-devops/quick-chat
-          PUBLIC_WHATSAPP: 5548998142779
-          PUBLIC_GA_ID: G-XXXXXXXXXX
+          # Set this to "/<repo>/" for project pages. Example: "/odins-vault/"
+          ASTRO_BASE: ${{ vars.ASTRO_BASE }}
+          PUBLIC_GA_ID: ${{ vars.PUBLIC_GA_ID }}
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: dist
 
   deploy:
     needs: build

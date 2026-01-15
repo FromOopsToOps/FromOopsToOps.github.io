@@ -1,184 +1,89 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import '../styles/globals.css';
+import { siteConfig } from '../config.ts';
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Pricing from '../components/Pricing.astro';
+import FAQ from '../components/FAQ.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout
-  title="Odin’s Vault — custom websites & MVP web apps"
-  description="We build landing pages, institutional sites, and MVP web apps for small businesses — fast, sharp, and tailored. SC/BR, online worldwide."
->
-  <section class="hero2">
-    <div class="container">
-      <div class="pill">Neon-green speed • Gold-level polish • Zero template vibes</div>
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-      <h1>
-        Your idea didn’t come here to be <span style="color:var(--neon); text-shadow:0 0 26px rgba(57,255,20,0.22);">average</span>.
-      </h1>
+    <title>{siteConfig.site.title}</title>
+    <meta name="description" content={siteConfig.site.description} />
+    <meta name="keywords" content={siteConfig.site.keywords} />
 
-      <p class="sub">
-        Odin’s Vault builds <b>custom</b> websites and MVP web apps for small businesses.
-        If you’re tired of “play by the rules” agencies, welcome — we ship <b>novel</b>, <b>clean</b>, and <b>fast</b>.
-      </p>
+    <meta property="og:title" content={siteConfig.site.ogTitle} />
+    <meta property="og:description" content={siteConfig.site.ogDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/screenshot.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-      <div class="btnrow">
-        <a class="btn btn-primary" href="https://calendly.com/your-next-devops/quick-chat" target="_blank" rel="noreferrer">Book a quick chat</a>
-        <a class="btn btn-ghost" href="https://wa.me/5548998142779" target="_blank" rel="noreferrer">WhatsApp</a>
-      </div>
+    <meta name="twitter:card" content={siteConfig.site.twitterCard} />
+    <meta name="twitter:title" content={siteConfig.site.twitterTitle} />
+    <meta
+      name="twitter:description"
+      content={siteConfig.site.twitterDescription}
+    />
+    <meta name="twitter:image" content="/og-image.png" />
 
-      <div class="statrow" aria-label="Quick stats">
-        <div class="stat"><b>Productized MVP</b><span>clear scope, fast delivery</span></div>
-        <div class="stat"><b>AI-accelerated</b><span>less busywork, more value</span></div>
-        <div class="stat"><b>SC/BR • Online</b><span>Brazil + worldwide</span></div>
-      </div>
-    </div>
-  </section>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    {import.meta.env.PUBLIC_GA_ID && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${import.meta.env.PUBLIC_GA_ID}');`}
+        </script>
+      </>
+    )}
 
-  <section class="section" id="features">
-    <div class="container">
-      <div class="kicker">Features</div>
-      <h2>Custom doesn’t mean slow</h2>
-      <p class="sub" style="max-width:820px;">
-        We don’t “sell templates”. We ship your product with a cyber-vault aesthetic, high contrast,
-        and the kind of confidence that makes customers think: <i>“holy sh*t, I found the right person.”</i>
-      </p>
+  </head>
 
-      <div class="grid grid-3" style="margin-top:18px;">
-        <div class="card"><h3>Fast delivery</h3><p>AI + sane tooling. Less ceremony, more shipping.</p></div>
-        <div class="card"><h3>Conversion-ready</h3><p>Copy structure + hierarchy that guides decisions.</p></div>
-        <div class="card"><h3>Mobile-first</h3><p>Looks sharp on phones without “responsive surprises”.</p></div>
+  <body class="text-mono-black bg-white font-sans antialiased">
+    <Navigation />
+    <Hero />
+    <Features />
+    <HowItWorks />
+    <Testimonials />
+    <Pricing />
+    <FAQ />
+    <Contact />
+    <Footer />
 
-        <div class="card"><h3>Performance minded</h3><p>Static-first when possible. Minimal JS. Quick loads.</p></div>
-        <div class="card"><h3>Easy handoff</h3><p>GitHub Pages today, scalable hosting tomorrow.</p></div>
-        <div class="card"><h3>No maintenance trap</h3><p>We leverage SaaS smartly so you don’t babysit infra.</p></div>
-
-        <div class="card"><h3>Analytics (GA)</h3><p>Track what matters. Improve what works.</p></div>
-        <div class="card"><h3>SEO basics</h3><p>Metadata, structure, and pages that search engines can read.</p></div>
-        <div class="card"><h3>Brand vibe</h3><p>Avant-garde, tech, trend — without being cringe.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="how">
-    <div class="container">
-      <div class="kicker">How it works</div>
-      <h2>From “in the drawer” to live</h2>
-      <p class="sub" style="max-width:820px;">
-        Some ideas are born mediocre. Yours isn’t. We move fast, keep you in control, and avoid fake complexity.
-      </p>
-
-      <div class="grid grid-3" style="margin-top:18px;">
-        <div class="card"><h3>1) Align</h3><p>We clarify goal, audience, and the one metric that matters.</p></div>
-        <div class="card"><h3>2) Design + Copy</h3><p>We shape the story: value, proof, and a clean call-to-action.</p></div>
-        <div class="card"><h3>3) Build</h3><p>Astro static site + modern components. Fast, secure, boring to host.</p></div>
-        <div class="card"><h3>4) Iterate</h3><p>We polish details: spacing, responsiveness, performance, SEO.</p></div>
-        <div class="card"><h3>5) Launch</h3><p>GitHub Pages deploy + tracking (GA) + a simple handoff.</p></div>
-        <div class="card"><h3>6) Grow</h3><p>When you’re ready: MVP web app, integrations, automation.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="testimonials">
-    <div class="container">
-      <div class="kicker">Proof</div>
-      <h2>Testimonials & screenshots</h2>
-      <p class="sub" style="max-width:820px;">
-        Placeholder page for now — you’ll paste real client stories soon.
-      </p>
-
-      <div class="grid grid-3" style="margin-top:18px;">
-        <div class="card">
-          <div class="quote">“If it was meant to be like everyone else, you wouldn’t be building yours.”</div>
-          <div class="who">— Placeholder • 2026</div>
-        </div>
-        <div class="card">
-          <div class="quote">“Some ideas are born mediocre. Yours isn’t.”</div>
-          <div class="who">— Placeholder • 2026</div>
-        </div>
-        <div class="card">
-          <div class="quote">“Everyone is afraid. The ones who face it win.”</div>
-          <div class="who">— Placeholder • 2026</div>
-        </div>
-      </div>
-
-      <div style="margin-top:14px;">
-        <a class="btn btn-ghost" href={`${Astro.base}/proof`}>Open the Proof page</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="pricing">
-    <div class="container">
-      <div class="kicker">Services</div>
-      <h2>Productized offers (MVP-friendly)</h2>
-      <p class="sub" style="max-width:820px;">
-        Clear outcomes. Clear scope. If you want custom beyond this — that’s the fun part.
-      </p>
-
-      <div class="grid grid-3" style="margin-top:18px;">
-        <div class="card">
-          <h3>Landing Page</h3>
-          <p>Single-page, conversion-focused. Perfect for new offers and campaigns.</p>
-          <div style="margin-top:12px;"><span class="pill">Fastest path to live</span></div>
-        </div>
-        <div class="card">
-          <h3>Institutional Site</h3>
-          <p>Multi-page brand site: About, Services, Tech, Proof, Contact. Clean and credible.</p>
-          <div style="margin-top:12px;"><span class="pill">Brand authority</span></div>
-        </div>
-        <div class="card">
-          <h3>MVP Web App + Landing</h3>
-          <p>Validate the product: auth, core flows, and a landing page to sell it.</p>
-          <div style="margin-top:12px;"><span class="pill">Build the real thing</span></div>
-        </div>
-      </div>
-
-      <div style="margin-top:14px;">
-        <a class="btn btn-ghost" href={`${Astro.base}/services`}>See details</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="kicker">FAQ</div>
-      <h2>Direct answers</h2>
-
-      <div class="grid grid-2" style="margin-top:18px;">
-        <div class="card">
-          <h3>“Isn’t this too complicated?”</h3>
-          <p>No. Most “complexity” is agencies selling fear. We keep the stack boring and the product sharp.</p>
-        </div>
-        <div class="card">
-          <h3>“Can I ask for something weird?”</h3>
-          <p>Please. Normal is everywhere. We collect treasures.</p>
-        </div>
-        <div class="card">
-          <h3>“Do you do maintenance?”</h3>
-          <p>We prefer to reduce it. We use SaaS and static hosting whenever it makes sense.</p>
-        </div>
-        <div class="card">
-          <h3>“Can you work with my content?”</h3>
-          <p>Yes. You bring text/screenshots. We shape it into a story that converts.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="contact" style="padding-bottom:110px;">
-    <div class="container">
-      <div class="kicker">Get started</div>
-      <h2>Let’s build your treasure</h2>
-      <p class="sub" style="max-width:820px;">
-        If you’re ready to stop hearing “it has to follow the rules”, book a quick chat or ping me on WhatsApp.
-      </p>
-
-      <div class="contactbox" style="margin-top:18px;">
-        <a class="btn btn-primary" href="https://calendly.com/your-next-devops/quick-chat" target="_blank" rel="noreferrer">Calendly — quick chat</a>
-        <a class="btn btn-ghost" href="https://wa.me/5548998142779" target="_blank" rel="noreferrer">WhatsApp — +55 48 99814-2779</a>
-      </div>
-
-      <p class="small" style="margin-top:14px; color: rgba(231,234,243,0.62);">
-        Location: SC / Brazil • Available online worldwide • Google Analytics supported (set <code>PUBLIC_GA_ID</code>).
-      </p>
-    </div>
-  </section>
-</BaseLayout>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -100px 0px',
+        };
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, observerOptions);
+        const scrollFadeElements = document.querySelectorAll(
+          '.scroll-fade, .scroll-fade-up, .scroll-fade-down, .scroll-fade-left, .scroll-fade-right',
+        );
+        scrollFadeElements.forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>

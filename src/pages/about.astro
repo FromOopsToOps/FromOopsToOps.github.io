@@ -1,50 +1,57 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import CTA from "../components/CTA.astro";
+import '../styles/globals.css';
+import { siteConfig } from '../config.ts';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout title="Sobre — Odin’s Vault" description="Quem é Odin, o que é a Vault, e por que você vai querer construir aqui.">
-  <section class="hero">
-    <div class="kicker">SOBRE</div>
-    <h1>Odin (e a Vault)</h1>
-    <p class="sub">
-      Página institucional — por enquanto com texto placeholder. Depois você ajusta com sua história real, conquistas, bastidores, e “porquê”.
-    </p>
-    <div style="margin-top:18px;">
-      <CTA />
-    </div>
-  </section>
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>About — Odin’s Vault</title>
+    <meta name="description" content={siteConfig.site.description} />
+    {import.meta.env.PUBLIC_GA_ID && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${import.meta.env.PUBLIC_GA_ID}');`}
+        </script>
+      </>
+    )}
+  </head>
+  <body>
+    <Navigation />
+    <main class="pt-24">
+      <section class="mono-mesh to-mono-lighter relative bg-gradient-to-b from-white px-4 pt-16 pb-14 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl">
+          <div class="mx-auto max-w-4xl">
+            <h1 class="text-mono-black mb-4 text-4xl font-bold tracking-tight sm:text-6xl">About</h1>
+            <p class="text-mono-dark text-xl leading-relaxed">Who’s behind the Vault (placeholder for now).</p>
+          </div>
+        </div>
+      </section>
 
-  <section class="section">
-    <div class="grid cols-2">
-      <div class="card">
-        <div class="kicker">HISTÓRIA</div>
-        <h2>Lorem ipsum</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia, ipsum at varius feugiat,
-          enim tellus placerat dui, a pharetra massa eros sed augue. Fusce quis elit non est tempus posuere.
-        </p>
-        <p>
-          Curabitur at mi in urna aliquam facilisis. Sed a finibus massa, vitae vulputate justo. Vivamus
-          feugiat, lectus in vulputate vulputate, metus libero cursus sem, eu bibendum orci risus quis nulla.
-        </p>
-      </div>
+      <section class="bg-mono-lighter px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl">
+          
+<div class="border-mono-lighter rounded-xl border bg-white p-8 shadow-lg">
+  <h2 class="text-mono-black mb-4 text-2xl font-bold">About Odin</h2>
+  <p class="text-mono-dark leading-relaxed">
+    <b>Placeholder copy</b> — you’ll replace this with your real story, background, and credibility points.
+    The tone here should feel confident, relaxed, and “this is easy for us”.
+  </p>
+  <p class="text-mono-dark mt-4 leading-relaxed">
+    Odin’s Vault exists for people with ideas that don’t fit the boring mold. If it was meant to be average,
+    you wouldn’t be building yours.
+  </p>
+</div>
 
-      <div class="card">
-        <div class="kicker">VALORES</div>
-        <h2>O que eu busco</h2>
-        <p style="margin:0;">
-          • Tesouros (ideias raras) > normalidade<br/>
-          • Execução rápida com feedback real<br/>
-          • Simplicidade que mantém o produto vivo<br/>
-          • Verdade técnica (sem enrolar o cliente)<br/>
-          • Estética com identidade (cyber vault)
-        </p>
-        <div class="hr"></div>
-        <p class="small" style="margin:0;">
-          “Algumas ideias nasceram medíocres, a sua não.”
-        </p>
-      </div>
-    </div>
-  </section>
-</BaseLayout>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,38 +1,85 @@
-# Odin's Vault — Static Site (Astro + GitHub Pages)
+# AI Agent Landing Page
 
-## Quick start
+![Demo](public/screenshot.jpeg)
+
+A modern, production-ready landing page template for AI and SaaS products. Built with Astro and Tailwind CSS.
+
+## Features
+
+- ⚡️ **Astro 5** - Fast, static site generation
+- 🎨 **Tailwind CSS 4** - Modern styling with CSS-first config
+- 📱 **Fully Responsive** - Mobile-first design
+- ♿ **Accessible** - Semantic HTML & ARIA compliant
+- 🎭 **Smooth Animations** - Scroll-triggered effects
+- 🎯 **SEO Ready** - Meta tags & Open Graph
+- 🧩 **Modular Components** - Easy to customize
+
+## Sections
+
+- Hero with stats
+- Features grid (9 cards)
+- How it works (4 steps)
+- Testimonials (6 with company logos)
+- Pricing tiers (3 plans)
+- FAQ accordion (6 questions)
+- Contact form
+- Footer
+
+## Quick Start
+
 ```bash
-npm i
+# Install dependencies
+npm install
+
+# Start dev server
 npm run dev
+
+# Build for production
+npm run build
 ```
 
-## Configure contact + analytics
-This project uses Astro public env vars:
+## Customization
 
-- `PUBLIC_CALENDLY_URL` (required for CTA)
-- `PUBLIC_WHATSAPP` (required for CTA, digits only; e.g. 5548998142779)
-- `PUBLIC_GA_ID` (optional GA4 Measurement ID, e.g. G-XXXXXXX)
+Edit content in:
 
-Create a `.env` file in the project root:
-```env
-PUBLIC_CALENDLY_URL=https://calendly.com/your-next-devops/quick-chat
-PUBLIC_WHATSAPP=5548998142779
-PUBLIC_GA_ID=G-XXXXXXXXXX
-```
+- `src/config.ts` - Site configuration
+- `src/content/*.ts` - Features, testimonials, FAQ
+- `src/styles/globals.css` - Colors & animations
 
-## GitHub Pages deployment
-This repo includes a workflow under `.github/workflows/deploy.yml` that:
-- builds the Astro site
-- uploads the `dist/` output
-- deploys to GitHub Pages
+## Deploy
 
-In GitHub:
-1. Go to **Settings → Pages**
-2. Under **Build and deployment**, select **GitHub Actions**
-3. Push to `main` and the workflow will publish the site.
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new)
 
-## Customize base path
-If your repository name is NOT `odins-vault`, update `astro.config.mjs`:
-- `base: "/<repo-name>/"`
+Works on Replit, Vercel, Netlify, and GitHub Pages.
 
-If you later move to a custom domain, you can usually remove the `base` setting.
+## License
+
+[MIT](LICENSE)
+
+
+## Odin’s Vault customization
+
+This repo is based on the **Astrogent** Astro theme, customized for **Odin’s Vault**.
+
+### Configure (GitHub Pages)
+
+Use GitHub **Repository Variables** (Settings → Secrets and variables → Actions → Variables):
+
+- `ASTRO_BASE`:
+  - Project pages: `/<repo-name>/` (example: `/odins-vault/`)
+  - Custom domain or user pages: leave empty
+- `PUBLIC_GA_ID` (optional): GA4 Measurement ID, e.g. `G-XXXXXXXXXX`
+
+### Contact links
+
+- Calendly: https://calendly.com/your-next-devops/quick-chat
+- WhatsApp: https://wa.me/5548998142779
+
+### Pages
+
+Besides the landing page, these static pages exist:
+
+- `/services`
+- `/tech`
+- `/about`
+- `/proof`

@@ -1,66 +1,68 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import CTA from "../components/CTA.astro";
+import '../styles/globals.css';
+import { siteConfig } from '../config.ts';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout title="Tech — Odin’s Vault" description="Como a Odin’s Vault acelera entregas usando AI, SaaS e escolhas arquiteturais pragmáticas.">
-  <section class="hero">
-    <div class="kicker">TECH</div>
-    <h1>Velocidade sem fragilidade</h1>
-    <p class="sub">
-      A Vault usa AI e serviços gerenciados onde faz sentido — não pra “substituir dev”, mas pra reduzir atrito,
-      cortar manutenção e colocar a ideia em produção mais rápido.
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Tech — Odin’s Vault</title>
+    <meta name="description" content={siteConfig.site.description} />
+    {import.meta.env.PUBLIC_GA_ID && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${import.meta.env.PUBLIC_GA_ID}');`}
+        </script>
+      </>
+    )}
+  </head>
+  <body>
+    <Navigation />
+    <main class="pt-24">
+      <section class="mono-mesh to-mono-lighter relative bg-gradient-to-b from-white px-4 pt-16 pb-14 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl">
+          <div class="mx-auto max-w-4xl">
+            <h1 class="text-mono-black mb-4 text-4xl font-bold tracking-tight sm:text-6xl">Tech</h1>
+            <p class="text-mono-dark text-xl leading-relaxed">How we ship faster: AI, SaaS, and pragmatic architecture.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-mono-lighter px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl">
+          
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+  <div class="border-mono-lighter rounded-xl border bg-white p-8 shadow-lg">
+    <h2 class="text-mono-black mb-3 text-2xl font-bold">AI-accelerated delivery</h2>
+    <p class="text-mono-dark leading-relaxed">
+      AI is used to reduce busywork: prototyping, copy iteration, consistency checks, and accelerating the first draft.
+      Humans still do the final cut.
     </p>
-    <div style="margin-top:18px;">
-      <CTA />
-    </div>
-  </section>
+  </div>
+  <div class="border-mono-lighter rounded-xl border bg-white p-8 shadow-lg">
+    <h2 class="text-mono-black mb-3 text-2xl font-bold">SaaS-first when it wins</h2>
+    <p class="text-mono-dark leading-relaxed">
+      We prefer managed services and proven SaaS integrations when it reduces maintenance overhead and hidden costs.
+    </p>
+  </div>
+</div>
+<div class="border-mono-lighter mt-8 rounded-xl border bg-white p-8 shadow-lg">
+  <h2 class="text-mono-black mb-3 text-2xl font-bold">Static-first, scalable later</h2>
+  <p class="text-mono-dark leading-relaxed">
+    GitHub Pages is a great start for speed, cost, and reliability. When your product needs dynamic features,
+    we extend with the right backend — not complexity for ego.
+  </p>
+</div>
 
-  <section class="section">
-    <div class="grid cols-2">
-      <div class="card">
-        <div class="kicker">PRINCÍPIOS</div>
-        <h2>O que guia as escolhas</h2>
-        <p style="margin:0;">
-          • Simplicidade operacional<br/>
-          • Menos moving parts (menos pane)<br/>
-          • Rápido de evoluir (sem reescrever tudo)<br/>
-          • Observabilidade quando importa<br/>
-          • Segurança sem paranoia improdutiva
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="kicker">AI NA PRÁTICA</div>
-        <h2>Como AI entra (de verdade)</h2>
-        <p style="margin:0;">
-          • Prototipação veloz (UI/fluxos)<br/>
-          • Geração e refino de copy/SEO<br/>
-          • Automação de tarefas repetitivas<br/>
-          • Revisão assistida (edge cases, consistência)<br/>
-          • Acelerar “primeiro rascunho” — humano faz o corte final
-        </p>
-      </div>
-    </div>
-
-    <div class="hr"></div>
-
-    <div class="grid cols-3">
-      <div class="card">
-        <div class="kicker">SaaS</div>
-        <h3>Menos manutenção</h3>
-        <p>Quando uma ferramenta resolve 80% do problema e reduz risco, eu prefiro integrar em vez de reinventar.</p>
-      </div>
-      <div class="card">
-        <div class="kicker">Stack</div>
-        <h3>Do simples ao sob medida</h3>
-        <p>Sites estáticos, apps com backend, integrações, automações… o stack segue o objetivo, não o ego.</p>
-      </div>
-      <div class="card">
-        <div class="kicker">Entrega</div>
-        <h3>Iterar > adivinhar</h3>
-        <p>Eu não vendo “certeza”. Eu vendo ciclo curto de feedback que encontra a solução certa rápido.</p>
-      </div>
-    </div>
-  </section>
-</BaseLayout>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

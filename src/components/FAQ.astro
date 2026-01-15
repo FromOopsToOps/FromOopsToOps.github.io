@@ -1,17 +1,58 @@
 ---
-const items = [
-  { q: "Vocês fazem ‘qualquer coisa’?", a: "Se for web, sim — mas eu vou te dizer na lata quando algo virar perda de tempo ou inflar custo sem retorno." },
-  { q: "Vai demorar?", a: "O objetivo é ritmo de startup: protótipo rápido, validação e entrega incremental. Sem drama." },
-  { q: "E manutenção?", a: "Preferência por SaaS e soluções gerenciadas. Menos overhead, menos boleto escondido." },
-  { q: "Posso pedir algo fora do comum?", a: "É literalmente o ponto. Normal é ruído. Se você quer algo único, a gente fala a mesma língua." }
-];
+import { siteConfig } from '../config.ts';
+import { Icon } from 'astro-icon/components';
+import { faqItems } from '../content/faq';
 ---
 
-<div class="grid cols-2">
-  {items.map((it) => (
-    <div class="card">
-      <h3 style="margin:0 0 6px;">{it.q}</h3>
-      <p style="margin:0;">{it.a}</p>
+<section id="faq" class="relative bg-white px-4 py-20 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-4xl">
+    <div class="scroll-fade-up mb-16 text-center">
+      <h2 class="text-mono-black mb-4 text-4xl font-bold sm:text-5xl">
+        {siteConfig.faq.title}
+      </h2>
+      <p class="text-mono-dark text-xl">
+        {siteConfig.faq.subtitle}
+      </p>
     </div>
-  ))}
-</div>
+
+    <div class="space-y-4">
+      {
+        faqItems.map((item, index) => (
+          <div
+            class={`scroll-fade-up border-mono-lighter rounded-lg border stagger-${(index % 9) + 1}`}
+          >
+            <button
+              class="faq-button flex w-full items-center justify-between px-6 py-5 text-left"
+              aria-expanded="false"
+            >
+              <span class="text-mono-black pr-8 font-semibold">
+                {item.question}
+              </span>
+              <Icon
+                name="heroicons:chevron-down"
+                class="faq-icon text-mono-gray h-5 w-5 flex-shrink-0"
+              />
+            </button>
+            <div class="faq-content text-mono-dark px-6 leading-relaxed">
+              {item.answer}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqButtons = document.querySelectorAll('.faq-button');
+    faqButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!isExpanded));
+        content?.classList.toggle('active');
+      });
+    });
+  });
+</script>
