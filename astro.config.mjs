@@ -5,6 +5,6 @@ import { defineConfig } from "astro/config";
 // - Replace /odins-vault/ if your repository name is different.
 export default defineConfig({
   site: "https://fromoopstoops.github.io",
-  base: "/odins-vault/",
+  base: "/FromOopsToOps.github.io/",
   output: "static"
 });
