@@ -4,7 +4,7 @@ import { defineConfig } from "astro/config";
 // - Replace <YOUR_GITHUB_USER> with your GitHub username.
 // - Replace /odins-vault/ if your repository name is different.
 export default defineConfig({
-  site: "https://<YOUR_GITHUB_USER>.github.io",
+  site: "https://fromoopstoops.github.io",
   base: "/odins-vault/",
   output: "static"
 });
