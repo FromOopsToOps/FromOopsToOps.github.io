@@ -27,10 +27,7 @@ import { faqItems } from '../content/faq';
               <span class="text-mono-black pr-8 font-semibold">
                 {item.question}
               </span>
-              <Icon
-                name="heroicons:chevron-down"
-                class="faq-icon text-mono-gray h-5 w-5 flex-shrink-0"
-              />
+              <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5"><path fill="currentColor" d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"/></svg>
             </button>
             <div class="faq-content text-mono-dark px-6 leading-relaxed">
               {item.answer}

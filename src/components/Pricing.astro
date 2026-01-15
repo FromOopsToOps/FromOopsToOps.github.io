@@ -36,10 +36,7 @@ import { siteConfig } from '../config.ts';
                 <ul class="mb-8 space-y-4">
                   {plan.features.map((feature) => (
                     <li class="flex items-start">
-                      <Icon
-                        name="heroicons:check"
-                        class="mt-0.5 mr-3 h-5 w-5 flex-shrink-0 text-white"
-                      />
+                      <svg viewBox="0 0 20 20" aria-hidden="true" class="mr-3 h-5 w-5 flex-shrink-0"><path fill="currentColor" d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.07 7.1a1 1 0 0 1-1.42 0L3.29 8.86a1 1 0 1 1 1.42-1.4l3.8 3.86 6.36-6.39a1 1 0 0 1 1.414-.006z"/></svg>
                       <span class="text-white">{feature}</span>
                     </li>
                   ))}
@@ -69,10 +66,7 @@ import { siteConfig } from '../config.ts';
               <ul class="mb-8 space-y-4">
                 {plan.features.map((feature) => (
                   <li class="flex items-start">
-                    <Icon
-                      name="heroicons:check"
-                      class="text-mono-black mt-0.5 mr-3 h-5 w-5 flex-shrink-0"
-                    />
+                    <svg viewBox="0 0 20 20" aria-hidden="true" class="mr-3 h-5 w-5 flex-shrink-0"><path fill="currentColor" d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.07 7.1a1 1 0 0 1-1.42 0L3.29 8.86a1 1 0 1 1 1.42-1.4l3.8 3.86 6.36-6.39a1 1 0 0 1 1.414-.006z"/></svg>
                     <span class="text-mono-dark">{feature}</span>
                   </li>
                 ))}

@@ -1,56 +1,57 @@
 ---
 import { siteConfig } from '../config.ts';
-
 ---
 
 <footer class="bg-mono-black px-4 py-16 text-white sm:px-6 lg:px-8">
   <div class="mx-auto max-w-7xl">
-    <div class="mb-12 grid grid-cols-1 gap-12 md:grid-cols-4">
-      <div class="md:col-span-1">
-        <div class="mb-4 text-2xl font-bold">{siteConfig.site.name}</div>
-        <p class="text-mono-light text-sm leading-relaxed">
+    <div class="mb-12 grid grid-cols-1 gap-12 lg:grid-cols-3">
+      <div>
+        <div class="text-2xl font-bold">{siteConfig.site.name}</div>
+        <p class="mt-4 max-w-sm text-white/75">
           {siteConfig.footer.tagline}
         </p>
       </div>
 
-      {
-        siteConfig.footer.columns.map((column) => (
-          <div>
-            <h4 class="mb-4 font-semibold">{column.title}</h4>
-            <ul class="space-y-3 text-sm">
-              {column.links.map((link) => (
-                <li>
-                  <a href={link.href} class="text-mono-light">
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      }
+      <div>
+        <div class="text-sm font-semibold text-white/80">Pages</div>
+        <ul class="mt-4 space-y-2 text-sm text-white/75">
+          <li><a href="/#features" class="hover:text-white">Features</a></li>
+          <li><a href="/#how-it-works" class="hover:text-white">How it works</a></li>
+          <li><a href="/#pricing" class="hover:text-white">Services</a></li>
+          <li><a href="/#faq" class="hover:text-white">FAQ</a></li>
+          <li><a href="/services" class="hover:text-white">All Services</a></li>
+          <li><a href="/tech" class="hover:text-white">Tech</a></li>
+          <li><a href="/about" class="hover:text-white">About</a></li>
+          <li><a href="/proof" class="hover:text-white">Proof</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-sm font-semibold text-white/80">Contact</div>
+        <ul class="mt-4 space-y-2 text-sm text-white/75">
+          <li>
+            <a href={siteConfig.contact.calendlyUrl} target="_blank" rel="noreferrer" class="hover:text-white">
+              Calendly — quick chat
+            </a>
+          </li>
+          <li>
+            <a href={siteConfig.contact.whatsappUrl} target="_blank" rel="noreferrer" class="hover:text-white">
+              WhatsApp — +55 48 99814-2779
+            </a>
+          </li>
+          <li>
+            <a href={`mailto:${siteConfig.contact.email}`} class="hover:text-white">
+              {siteConfig.contact.email}
+            </a>
+          </li>
+        </ul>
+
+        <p class="mt-6 text-xs text-white/55">SC/BR • available online worldwide</p>
+      </div>
     </div>
 
-    <div
-      class="border-mono-darker flex flex-col items-center justify-between border-t pt-8 md:flex-row"
-    >
-      <p class="text-mono-light mb-4 text-sm md:mb-0">
-        &copy; {siteConfig.footer.copyright}
-      </p>
-
-      <div class="flex space-x-6">
-        {
-          siteConfig.footer.social.map((social) => (
-            <a
-              href={social.href}
-              class="text-mono-light"
-              aria-label={social.name}
-            >
-              <Icon name={iconMap[social.icon]} class="h-6 w-6" />
-            </a>
-          ))
-        }
-      </div>
+    <div class="border-t border-white/10 pt-8 text-sm text-white/55">
+      © {new Date().getFullYear()} {siteConfig.site.name}. No fluff. Just shipping.
     </div>
   </div>
 </footer>
