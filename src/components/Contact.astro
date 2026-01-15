@@ -1,6 +1,5 @@
 ---
 import { siteConfig } from '../config.ts';
-import { Icon } from 'astro-icon/components';
 ---
 
 <section id="contact" class="bg-mono-lighter px-4 py-20 sm:px-6 lg:px-8">
@@ -18,10 +17,7 @@ import { Icon } from 'astro-icon/components';
           {
             siteConfig.contact.benefits.map((benefit) => (
               <li class="flex items-center">
-                <Icon
-                  name="heroicons:check"
-                  class="text-mono-black mr-4 h-6 w-6 flex-shrink-0"
-                />
+                <svg viewBox="0 0 20 20" aria-hidden="true" class="mr-4 h-6 w-6 flex-shrink-0"><path fill="currentColor" d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.07 7.1a1 1 0 0 1-1.42 0L3.29 8.86a1 1 0 1 1 1.42-1.4l3.8 3.86 6.36-6.39a1 1 0 0 1 1.414-.006z"/></svg>
                 <span class="text-mono-dark">{benefit}</span>
               </li>
             ))
