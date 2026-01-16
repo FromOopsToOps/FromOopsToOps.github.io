@@ -1,56 +1,22 @@
 export const featuresContent = [
   {
-    icon: 'lightning',
-    title: 'Autonomous Execution',
+    title: 'Entrega rápida (sem gambiarra)',
     description:
-      'AI agents that understand context, make decisions, and execute tasks without constant supervision.',
+      'Aceleramos com IA e ferramentas prontas quando faz sentido — sem criar manutenção infinita só pra parecer “sofisticado”.',
   },
   {
-    icon: 'code',
-    title: 'Smart Integration',
+    title: 'Design que converte',
     description:
-      'Seamlessly connect with your tools: Slack, email, databases, APIs, and 1000+ platforms.',
+      'Landing page não é arte abstrata. É clareza, prova e CTA. O objetivo é vender, captar lead ou agendar.'
   },
   {
-    icon: 'chart',
-    title: 'Real-Time Analytics',
+    title: 'Estrutura limpa e escalável',
     description:
-      'Monitor performance, track success rates, and optimize workflows with detailed insights.',
+      'Começa estático no GitHub Pages. Quando precisar de backend, evolui sem reescrever tudo.'
   },
   {
-    icon: 'chat',
-    title: 'Natural Language',
+    title: 'Direto ao ponto',
     description:
-      'Configure agents using plain English. No complex programming or technical expertise required.',
-  },
-  {
-    icon: 'shield',
-    title: 'Enterprise Security',
-    description:
-      'Bank-level encryption, SOC 2 compliance, and complete data privacy. Your data stays secure.',
-  },
-  {
-    icon: 'clock',
-    title: '24/7 Operation',
-    description:
-      'Agents work around the clock, handling tasks while you sleep. Reliable uptime guaranteed.',
-  },
-  {
-    icon: 'brush',
-    title: 'Custom Workflows',
-    description:
-      'Build tailored automation flows that match your unique business processes and requirements.',
-  },
-  {
-    icon: 'layers',
-    title: 'Multi-Agent Teams',
-    description:
-      'Coordinate multiple specialized agents working together to solve complex, multi-step challenges.',
-  },
-  {
-    icon: 'zap',
-    title: 'Instant Scaling',
-    description:
-      'Scale from 1 to 1000+ agents instantly. Handle peak loads without infrastructure headaches.',
+      'Sem “o cliente tá sempre certo”. A gente fala a verdade técnica e constrói o caminho mais curto pro resultado.'
   },
 ];

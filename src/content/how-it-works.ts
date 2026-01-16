@@ -1,32 +1,20 @@
 export const howItWorksSteps = [
   {
-    number: 1,
-    title: 'Define Your Goal',
+    step: '01',
+    title: 'Alinhamento rápido',
     description:
-      'Describe what you want to automate in plain English. No technical jargon needed.',
+      '15 minutos pra entender objetivo, público, CTA e o mínimo que precisa existir pra funcionar.'
   },
   {
-    number: 2,
-    title: 'Connect Your Tools',
+    step: '02',
+    title: 'Protótipo e iteração',
     description:
-      'Link your existing apps and services. We support 1000+ integrations out of the box.',
+      'A primeira versão sai rápido. Você aprova direção, a gente ajusta sem drama.'
   },
   {
-    number: 3,
-    title: 'Deploy Your Agent',
+    step: '03',
+    title: 'Entrega e publicação',
     description:
-      'Our AI configures and optimizes your agent automatically. Review and launch in one click.',
-  },
-  {
-    number: 4,
-    title: 'Monitor & Optimize',
-    description:
-      'Track performance in real-time and let your agents learn and improve continuously.',
-  },
-  {
-    number: 5,
-    title: 'Scale & Grow',
-    description:
-      "Add more agents, automate new workflows, and watch your team's productivity soar.",
+      'Subimos no GitHub Pages (ou onde fizer sentido), com analytics e checklist de qualidade.'
   },
 ];

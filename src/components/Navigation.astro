@@ -1,14 +1,15 @@
 ---
 import { siteConfig } from '../config.ts';
+import { Icon } from 'astro-icon/components';
 ---
 
 <nav
-  class="border-mono-lighter fixed top-0 z-50 w-full border-b bg-white/95 backdrop-blur-sm"
+  class="border-mono-lighter fixed top-0 z-50 w-full border-b bg-[#070A0F]/95 backdrop-blur-sm"
 >
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <div class="flex items-center">
-        <a href="/" class="text-mono-black text-xl font-bold"
+        <a href="/" class="text-white text-xl font-bold"
           >{siteConfig.site.name}</a
         >
       </div>
@@ -16,14 +17,14 @@ import { siteConfig } from '../config.ts';
       <div class="hidden items-center space-x-8 md:flex">
         {
           siteConfig.navigation.links.map((link) => (
-            <a href={link.href} class="text-mono-dark">
+            <a href={link.href} class="text-white/80">
               {link.name}
             </a>
           ))
         }
         <a
           href={siteConfig.navigation.cta.href}
-          class="bg-mono-black vault-glow rounded-lg px-6 py-2 text-white"
+          class="bg-mono-black rounded-lg px-6 py-2 text-white"
         >
           {siteConfig.navigation.cta.text}
         </a>
@@ -36,7 +37,7 @@ import { siteConfig } from '../config.ts';
         aria-expanded="false"
         aria-label="Toggle navigation menu"
       >
-        <svg viewBox="0 0 20 20" aria-hidden="true" class="h-6 w-6"><path fill="currentColor" d="M3 5h14a1 1 0 0 0 0-2H3a1 1 0 0 0 0 2zm14 4H3a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2zm0 6H3a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2z"/></svg>
+        <Icon name="heroicons:bars-3" class="text-white h-6 w-6" />
       </button>
     </div>
 
@@ -44,7 +45,7 @@ import { siteConfig } from '../config.ts';
       <div class="flex flex-col space-y-3">
         {
           siteConfig.navigation.links.map((link) => (
-            <a href={link.href} class="text-mono-dark py-2">
+            <a href={link.href} class="text-white/80 py-2">
               {link.name}
             </a>
           ))

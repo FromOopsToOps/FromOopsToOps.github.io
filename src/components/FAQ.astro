@@ -1,15 +1,16 @@
 ---
 import { siteConfig } from '../config.ts';
+import { Icon } from 'astro-icon/components';
 import { faqItems } from '../content/faq';
 ---
 
-<section id="faq" class="relative bg-white px-4 py-20 sm:px-6 lg:px-8">
+<section id="faq" class="relative bg-[#070A0F] px-4 py-20 sm:px-6 lg:px-8">
   <div class="mx-auto max-w-4xl">
     <div class="scroll-fade-up mb-16 text-center">
-      <h2 class="text-mono-black mb-4 text-4xl font-bold sm:text-5xl">
+      <h2 class="text-white mb-4 text-4xl font-bold sm:text-5xl">
         {siteConfig.faq.title}
       </h2>
-      <p class="text-mono-dark text-xl">
+      <p class="text-white/80 text-xl">
         {siteConfig.faq.subtitle}
       </p>
     </div>
@@ -24,12 +25,15 @@ import { faqItems } from '../content/faq';
               class="faq-button flex w-full items-center justify-between px-6 py-5 text-left"
               aria-expanded="false"
             >
-              <span class="text-mono-black pr-8 font-semibold">
+              <span class="text-white pr-8 font-semibold">
                 {item.question}
               </span>
-              <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5"><path fill="currentColor" d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"/></svg>
+              <Icon
+                name="heroicons:chevron-down"
+                class="faq-icon text-white/60 h-5 w-5 flex-shrink-0"
+              />
             </button>
-            <div class="faq-content text-mono-dark px-6 leading-relaxed">
+            <div class="faq-content text-white/80 px-6 leading-relaxed">
               {item.answer}
             </div>
           </div>

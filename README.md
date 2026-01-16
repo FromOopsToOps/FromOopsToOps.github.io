@@ -55,31 +55,3 @@ Works on Replit, Vercel, Netlify, and GitHub Pages.
 ## License
 
 [MIT](LICENSE)
-
-
-## Odin’s Vault customization
-
-This repo is based on the **Astrogent** Astro theme, customized for **Odin’s Vault**.
-
-### Configure (GitHub Pages)
-
-Use GitHub **Repository Variables** (Settings → Secrets and variables → Actions → Variables):
-
-- `ASTRO_BASE`:
-  - Project pages: `/<repo-name>/` (example: `/odins-vault/`)
-  - Custom domain or user pages: leave empty
-- `PUBLIC_GA_ID` (optional): GA4 Measurement ID, e.g. `G-XXXXXXXXXX`
-
-### Contact links
-
-- Calendly: https://calendly.com/your-next-devops/quick-chat
-- WhatsApp: https://wa.me/5548998142779
-
-### Pages
-
-Besides the landing page, these static pages exist:
-
-- `/services`
-- `/tech`
-- `/about`
-- `/proof`

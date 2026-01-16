@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from '../config.ts';
+import { Icon } from 'astro-icon/components';
 import { featuresContent } from '../content/features';
 
 const iconMap = {
@@ -15,7 +16,7 @@ const iconMap = {
 };
 ---
 
-<section id="features" class="relative bg-white px-4 py-20 sm:px-6 lg:px-8">
+<section id="features" class="relative bg-[#070A0F] px-4 py-20 sm:px-6 lg:px-8">
   <div
     class="border-mono-lighter absolute top-8 left-8 h-16 w-16 border-t-2 border-l-2"
   >
@@ -27,10 +28,10 @@ const iconMap = {
 
   <div class="mx-auto max-w-7xl">
     <div class="scroll-fade-up mx-auto mb-16 max-w-3xl text-center">
-      <h2 class="text-mono-black mb-4 text-4xl font-bold sm:text-5xl">
+      <h2 class="text-white mb-4 text-4xl font-bold sm:text-5xl">
         {siteConfig.features.title}
       </h2>
-      <p class="text-mono-dark text-xl">
+      <p class="text-white/80 text-xl">
         {siteConfig.features.subtitle}
       </p>
     </div>
@@ -42,12 +43,12 @@ const iconMap = {
             class={`group ${index % 2 === 0 ? 'scroll-fade-left' : 'scroll-fade-right'} border-mono-lighter rounded-xl border p-8 stagger-${(index % 9) + 1}`}
           >
             <div class="feature-icon bg-mono-black mb-6 flex h-14 w-14 items-center justify-center rounded-lg text-white">
-              <span class="text-mono-gray text-sm font-semibold">•</span>
+              <Icon name={iconMap[feature.icon]} class="h-7 w-7" />
             </div>
-            <h3 class="text-mono-black mb-3 text-xl font-semibold">
+            <h3 class="text-white mb-3 text-xl font-semibold">
               {feature.title}
             </h3>
-            <p class="text-mono-dark leading-relaxed">{feature.description}</p>
+            <p class="text-white/80 leading-relaxed">{feature.description}</p>
           </div>
         ))
       }
