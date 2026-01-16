@@ -40,16 +40,27 @@ export const siteConfig = {
 
   // ============================================
   // HERO
-  // ============================================
-  hero: {
+  // ============================================  hero: {
     headline: "Seu site não veio pra ser",
     subheadline: "igual a todo mundo.",
     description:
       "Algumas ideias nasceram medíocres. A sua não. A Odin’s Vault constrói sites e MVPs web sob medida, com a tranquilidade de quem domina a stack — e a urgência de quem sabe que tempo custa caro.",
-    primary: {
-      text: "Agendar no Calendly",
-      href: "https://calendly.com/your-next-devops/quick-chat",
+    cta: {
+      primary: {
+        text: "Agendar no Calendly",
+        href: "https://calendly.com/your-next-devops/quick-chat",
+      },
+      secondary: {
+        text: "Chamar no WhatsApp",
+        href: "https://wa.me/5548998142779",
+      },
     },
+    stats: [
+      { value: "MVP", label: "oferta produtizada" },
+      { value: "IA", label: "execução acelerada" },
+      { value: "SC/BR", label: "online e local" },
+    ],
+  },
     secondary: {
       text: "Chamar no WhatsApp",
       href: "https://wa.me/5548998142779",
